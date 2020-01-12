@@ -12,17 +12,10 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <h1>
-        Dzisiaj jest:
-    <%       String nowString = LocalDateTime.now().toString();
-            out.print(nowString);
-            %>
-        <%--    Dzisiaj jest: <%= java.time.LocalDateTime.now().toString() %>--%>
-    </h1>
-<p>Licznik odwiedzin: <%= ++visitCounter %>
 
-</p>
-
+<p>Server name: ${pageContext.request.serverName}</p>
+<p>Server port: ${pageContext.request.serverPort}</p>
+<p>Request URI: ${pageContext.request.requestURI}</p>
 
 </body>
 </html>
