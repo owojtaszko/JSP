@@ -1,6 +1,7 @@
 package com.sda.services.servlet;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//@WebServlet(name="HelloWordServlet", urlPatterns = "/")
+@WebServlet(
+        name="HelloWordServlet"
+        , urlPatterns = "/"
+        , initParams = {
+                @WebInitParam(name="userId", value = "123456"),
+                @WebInitParam(name = "localization", value = "Poland")
+                }   
+)
 
 public class HelloWordServlet extends HttpServlet {
 
