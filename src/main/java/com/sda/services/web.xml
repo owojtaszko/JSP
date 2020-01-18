@@ -22,6 +22,17 @@
     <servlet-mapping>
         <servlet-name>HelloWordServlet</servlet-name>
         <url-pattern>/</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.sda.services.filter.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+<!--        <servlet-name>HelloWordServlet</servlet-name>-->
+    </filter-mapping>
 
 </web-app>

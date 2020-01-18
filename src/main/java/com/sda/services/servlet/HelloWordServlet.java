@@ -15,7 +15,7 @@ import java.io.PrintWriter;
         , initParams = {
                 @WebInitParam(name="userId", value = "123456"),
                 @WebInitParam(name = "localization", value = "Poland")
-                }   
+                }
 )
 
 public class HelloWordServlet extends HttpServlet {
