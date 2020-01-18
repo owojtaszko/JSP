@@ -14,13 +14,16 @@
 <body>
 <h2>Obsługa Cookie </h2>
 <%
-    int searchId = 123456;
-    Cookie cookie = new Cookie("searchId", String.valueOf((searchId)));
-    cookie.setMaxAge(60*60*24);
-    response.addCookie(cookie);
-
-    Cookie usernameCookie = new Cookie("username", "MyUserName");
-    response.addCookie(usernameCookie);
+   Cookie[] cookies = request.getCookies();
+   if (cookies != null){
+       out.println("<h2>Found Cookies</h2>");
+       for(Cookie cookie: cookies){
+           out.print("Name" + cookie.getName() + ", ");
+           out.print("Value" + cookie.getValue() + "<br/>");
+       }
+       }else{
+       out.print("<h2>No cookies found </h2>");
+   }
 %>
 
 
@@ -44,5 +47,5 @@
 
 <%--<a href="search.jsp?query=JAVA&page=3&sort=desc">kliknij mnie</a>--%>
 
-<%--</body>--%>
+</body>
 </html>
