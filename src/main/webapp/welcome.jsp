@@ -26,7 +26,6 @@
    }
 %>
 
-
 <%--&lt;%&ndash;<jsp:forward page="redirected.jsp">&ndash;%&gt;--%>
 <%--&lt;%&ndash;    <jsp:param name="myParam" value="my value"/>&ndash;%&gt;--%>
 <%--&lt;%&ndash;</jsp:forward>&ndash;%&gt;--%>
