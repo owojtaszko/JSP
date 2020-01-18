@@ -7,6 +7,15 @@
     <servlet>
         <servlet-name>HelloWordServlet</servlet-name>
         <servlet-class> com.sda.services.servlet.HelloWordServlet </servlet-class>
+        <init-param>
+            <param-name>userId</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>localization</param-name>
+            <param-value>Poland</param-value>
+        </init-param>
 
     </servlet>
 
@@ -14,4 +23,5 @@
         <servlet-name>HelloWordServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
 </web-app>
